@@ -9,10 +9,8 @@ console.log(arr_1.join(', '));
 // 2. Вивести квадрати чисел від 10 до 20.
 
 let sqrtOfC = [];
-let sum_1 = 1;
-for (let c = 10; c <= 20; c++) {
-    sum_1 = c ** 2;
-    sqrtOfC.push(sum_1);
+for (let i = 10; i <= 20; i++) {
+    sqrtOfC.push(i ** 2);
 }
 console.log(sqrtOfC);
 
@@ -62,11 +60,12 @@ console.log(`${sumElements}`);
 let arr = [];
 for (let e = 30; e <= 80; e++) {
     if (e % 2 == 0) {
-      arr.push(e)
+      arr.push(e);
     }
   }
-
-  console.log(arr);
+let add = arr => arr.reduce((a, b) => a + b, 0);
+let sumEven = add(arr);
+console.log(sumEven);
 
 // 8. Вивести всі числа в діапазоні від 100 до 200 кратні 3.
 
@@ -84,8 +83,8 @@ console.log(multiCalculation());
 // 9. Дано натуральне число. Знайти та вивести на сторінку всі його дільники.
 
 let deliteli = [];
-let n = 642;
-for (let u = 2; u * 2 <= n; u++) {
+let n = 50;
+for (let u = 1; u <= n; u++) {
     if (n % u == 0) {
         deliteli.push(u);
     }
@@ -94,20 +93,17 @@ console.log(deliteli);
 
 // 10. Визначити кількість його парних дільників.
 
-const Even = (K) => K % 2 === 0;
+const Even = (k) => k % 2 === 0;
 const evenAmount = deliteli.filter(Even).length;
 console.log(evenAmount);
 
 // 11. Знайти суму його парних дільників.
 
 let result_4 = deliteli.filter(function(elem) {
-  if (elem % 2 == 0) {
-    return true;
-  } else {
-      return false;
-    }
+  return elem % 2 == 0;
 });
-console.log(result_4);
+let add_1 = result_4 => result_4.reduce((a, b) => a + b, 0);
+console.log(add_1(result_4));
 
 // 12. Надрукувати повну таблицю множення від 1 до 10.
 
